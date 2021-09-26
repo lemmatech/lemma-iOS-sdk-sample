@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ojb-cS-dXb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Interstitial-->
+        <scene sceneID="xcu-Wu-fi2">
+            <objects>
+                <viewController title="Interstitial Ad" id="8D8-Bu-Kjk" userLabel="Interstitial" customClass="InterstitialViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XCw-8B-gnP"/>
+                        <viewControllerLayoutGuide type="bottom" id="RO7-t5-87w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CpE-HY-i75">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jP-s6-tSJ">
+                                <rect key="frame" x="162" y="168" width="90" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="DJe-mx-NDu"/>
+                                    <constraint firstAttribute="height" constant="34" id="OCg-O9-pe9"/>
+                                </constraints>
+                                <state key="normal" title="Load Ad"/>
+                                <connections>
+                                    <action selector="loadBtnAction:" destination="8D8-Bu-Kjk" eventType="touchUpInside" id="9mp-ee-cG1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evW-Cm-uhm">
+                                <rect key="frame" x="162" y="229" width="90" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="Utk-ef-AX6"/>
+                                    <constraint firstAttribute="height" constant="34" id="vQ9-HS-G3Q"/>
+                                </constraints>
+                                <state key="normal" title="Show Ad"/>
+                                <connections>
+                                    <action selector="showBtnAction:" destination="8D8-Bu-Kjk" eventType="touchUpInside" id="GeE-Jg-FHp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1HO-7N-17w"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6jP-s6-tSJ" firstAttribute="centerX" secondItem="CpE-HY-i75" secondAttribute="centerX" id="OYZ-0v-sU9"/>
+                            <constraint firstItem="evW-Cm-uhm" firstAttribute="top" secondItem="6jP-s6-tSJ" secondAttribute="bottom" constant="27" id="Vmz-3y-9ng"/>
+                            <constraint firstItem="evW-Cm-uhm" firstAttribute="leading" secondItem="6jP-s6-tSJ" secondAttribute="leading" id="XlS-UK-4rr"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="evW-Cm-uhm" secondAttribute="trailing" constant="20" symbolic="YES" id="kj3-k0-yTU"/>
+                            <constraint firstItem="6jP-s6-tSJ" firstAttribute="top" secondItem="XCw-8B-gnP" secondAttribute="bottom" constant="80" id="n6j-1F-P9d"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9kN-Mu-VZO"/>
+                    <connections>
+                        <outlet property="loadBtn" destination="6jP-s6-tSJ" id="OuX-cp-sS0"/>
+                        <outlet property="showBtn" destination="evW-Cm-uhm" id="Hsh-Ja-3uJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nc2-fE-Qkq" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="603" y="867"/>
+        </scene>
+        <!--Banner-->
+        <scene sceneID="OH2-rv-7h0">
+            <objects>
+                <viewController title="Banner Ad" id="mII-xv-Nv6" userLabel="Banner" customClass="BannerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="31j-Zu-D7x"/>
+                        <viewControllerLayoutGuide type="bottom" id="o6s-M1-aPG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="od4-k5-Xfn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="9UX-Ub-4d7"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IR4-e1-mha"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uzO-4K-wGn" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="529" y="378"/>
+        </scene>
+        <!--SDK App-->
+        <scene sceneID="LIc-Gb-z82">
+            <objects>
+                <tableViewController title="SDK App" id="M2C-jn-7fn" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="nW1-pJ-cMi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                        <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                        <sections>
+                            <tableViewSection headerTitle="Ad Formats" id="KgT-g3-FAm">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="0XW-VT-7GX" style="IBUITableViewCellStyleDefault" id="Doz-YB-0TD">
+                                        <rect key="frame" x="0.0" y="49.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Doz-YB-0TD" id="Lvj-lw-fqw">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Banner Ad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0XW-VT-7GX">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="BannerAd"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="mII-xv-Nv6" kind="show" id="5lw-Jz-MLn"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="QTF-cl-r8U" style="IBUITableViewCellStyleDefault" id="E84-Xw-yQA">
+                                        <rect key="frame" x="0.0" y="93.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E84-Xw-yQA" id="o6t-kv-5bP">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Interstitial Ad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QTF-cl-r8U">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="BannerAd"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="8D8-Bu-Kjk" kind="show" id="icg-70-e9i"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="RVr-8Z-QFW" style="IBUITableViewCellStyleDefault" id="Hbm-U4-TcF">
+                                        <rect key="frame" x="0.0" y="137.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hbm-U4-TcF" id="oS4-YL-rKJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="InBanner Video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RVr-8Z-QFW">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="BannerAd"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="SWQ-gO-g9p" kind="show" id="hEo-uQ-Win"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="M2C-jn-7fn" id="b9C-7V-IrA"/>
+                            <outlet property="delegate" destination="M2C-jn-7fn" id="rW7-50-GzO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="SDK App" id="ct5-lu-5AO">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="9jv-BE-JbP"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ra-rb-NAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-607" y="491"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="k9m-Zu-HAa">
+            <objects>
+                <navigationController id="Ojb-cS-dXb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XYW-I1-Z3r">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="M2C-jn-7fn" kind="relationship" relationship="rootViewController" id="7dv-Nv-oNp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="19D-Ot-GEN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1497" y="1039"/>
+        </scene>
+        <!--InBanner Video-->
+        <scene sceneID="A3H-7h-iUP">
+            <objects>
+                <viewController title="Banner Ad" id="SWQ-gO-g9p" userLabel="InBanner Video" customClass="InBannerVideoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QN9-gZ-Ukk"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZWy-vf-zLM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uxG-4o-ECt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XCF-cR-bYZ"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mYZ-us-ZcG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fFf-cW-1UQ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="529" y="378"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
