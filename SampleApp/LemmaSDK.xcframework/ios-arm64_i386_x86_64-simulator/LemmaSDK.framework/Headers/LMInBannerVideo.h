@@ -19,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// Indicates ad successfully loaded and rendered.
 - (void)bannerViewDidReceiveAd:(LMInBannerVideo *)bannerView;
 
+/// Indicates ad successfully loaded and rendered.
+- (void)bannerViewDidFinishPlayingAd:(LMInBannerVideo *)bannerView;
+
 /// Indicates ad failed to load/render the add, gives error details
 - (void)bannerView:(LMInBannerVideo *)bannerView
 didFailToReceiveAdWithError:(NSError *_Nullable)error;

@@ -157,7 +157,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="SWQ-gO-g9p" kind="show" id="hEo-uQ-Win"/>
+                                            <segue destination="34N-iy-Ou8" kind="show" id="yFp-z8-feo"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -193,22 +193,59 @@
             <point key="canvasLocation" x="-1497" y="1039"/>
         </scene>
         <!--InBanner Video-->
-        <scene sceneID="A3H-7h-iUP">
+        <scene sceneID="KGj-ZH-pOA">
             <objects>
-                <viewController title="Banner Ad" id="SWQ-gO-g9p" userLabel="InBanner Video" customClass="InBannerVideoViewController" sceneMemberID="viewController">
+                <viewController title="Banner Ad" id="34N-iy-Ou8" userLabel="InBanner Video" customClass="InBannerVideoViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QN9-gZ-Ukk"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZWy-vf-zLM"/>
+                        <viewControllerLayoutGuide type="top" id="5CW-a3-a1m"/>
+                        <viewControllerLayoutGuide type="bottom" id="ARj-zw-Kpe"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uxG-4o-ECt">
+                    <view key="view" contentMode="scaleToFill" id="zmW-8h-Ww7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="XCF-cR-bYZ"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghu-W5-iVb">
+                                <rect key="frame" x="162" y="151" width="90" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="Dwa-fw-FaL"/>
+                                    <constraint firstAttribute="height" constant="34" id="KZc-WW-qgd"/>
+                                </constraints>
+                                <state key="normal" title="Load Ad"/>
+                                <connections>
+                                    <action selector="loadBtnAction:" destination="34N-iy-Ou8" eventType="touchUpInside" id="cQ4-T3-pRF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZ1-LZ-QOg">
+                                <rect key="frame" x="162" y="212" width="90" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Bqm-P8-bFW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="qq0-0j-ECK"/>
+                                </constraints>
+                                <state key="normal" title="Play Ad"/>
+                                <connections>
+                                    <action selector="playBtnAction:" destination="34N-iy-Ou8" eventType="touchUpInside" id="hll-Ib-Vnm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pCa-y0-63h"/>
                         <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ghu-W5-iVb" firstAttribute="centerX" secondItem="pCa-y0-63h" secondAttribute="centerX" id="1Ma-uo-Y78"/>
+                            <constraint firstItem="ghu-W5-iVb" firstAttribute="top" secondItem="pCa-y0-63h" secondAttribute="top" constant="63" id="6fF-hv-RL7"/>
+                            <constraint firstItem="vZ1-LZ-QOg" firstAttribute="leading" secondItem="ghu-W5-iVb" secondAttribute="leading" id="PTM-4f-pvN"/>
+                            <constraint firstItem="pCa-y0-63h" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vZ1-LZ-QOg" secondAttribute="trailing" symbolic="YES" id="e7E-KX-hPQ"/>
+                            <constraint firstItem="vZ1-LZ-QOg" firstAttribute="top" secondItem="ghu-W5-iVb" secondAttribute="bottom" constant="27" id="qXy-lO-ml0"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="mYZ-us-ZcG"/>
+                    <navigationItem key="navigationItem" id="DmW-t8-M33"/>
+                    <connections>
+                        <outlet property="loadBtn" destination="ghu-W5-iVb" id="OVi-XK-27a"/>
+                        <outlet property="playAdBtn" destination="vZ1-LZ-QOg" id="soA-oM-FyX"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fFf-cW-1UQ" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lmu-lR-2tt" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="529" y="378"/>
         </scene>
